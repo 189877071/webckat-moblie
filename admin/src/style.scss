@@ -1,0 +1,222 @@
+
+.index-nav {
+    position: fixed;
+    width: 300px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 60px;
+    background: #262626;
+    border-right: 1px solid #ddd;
+    
+    li a {
+        color: #fff;
+        border-radius: 0;
+        text-indent: 10px;
+        &:hover {
+            background: #126df5;
+        }
+    }
+    .nav li.active a {
+        background: #f00;
+        &:hover {
+            background: #f00;
+        }
+    }
+}
+
+.index-content {
+    padding-left: 301px;
+    padding-top: 10px;
+}
+.m0 {
+    margin: 0;
+    z-index: 2;
+    border-radius: 0;
+}
+.nav-pills>li.active>a.radius-none {
+    border-radius: 0;
+}
+
+.home-box {
+    padding: 20px;
+    border: 1px solid #eee;
+    margin: 50px;
+    background: #f8f8f8;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.sestem-box {
+    dt {
+        line-height: 30px;
+        height: 30px;
+    }
+    dd {
+        line-height: 40px;
+        height: 40px;
+        border-bottom: 1px dashed #ccc;
+    }
+    em {
+        font-style: normal;
+    }
+}
+.photo-dl {
+    dt {
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    dd {
+        height: 35px;
+        line-height: 35px;
+    }
+    strong {
+        display: inline-block;
+        width: 60px;
+        text-align: right;
+        margin-right: 10px;
+    }
+}
+
+.set-img-box {
+    margin-bottom: 30px;
+    position: relative;
+    transition: opacity .3s;
+    opacity: 1;
+    .rm-mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255,255,255,.9);   
+        transition: .3s;
+        opacity: 0;
+    }
+    .btn-box {
+        left: 0;
+        top: 30px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
+    .rm-mask:hover, .to-is-update {
+        opacity: 1;
+    }
+    .update-box {
+        width: 100%;
+        position: absolute;
+        bottom: 30px;
+        .jd-box {
+            width: 80%;
+            border: 1px solid #ccc;
+            height: 20px;
+            box-shadow: 0 0 3px rgba(0,0,0,.3);
+            border-radius: 20px;
+            margin: 0 auto;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
+        .jd {
+            height: 20px;
+            background: #126df5;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+        .jd-size {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            color: #000;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        .jd-title {
+            padding-top: 10px;
+            text-align: center;
+            color: #126df5;
+        }
+    }
+}
+
+span.wauto {
+    width: auto;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.feedback-default span{
+    display: none;
+}
+
+.mask {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.8);
+    z-index: 999;
+    position: absolute;
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    line-height: 800px;
+}
+
+.notice-content {
+    h3 {
+        position: relative;
+        height: 60px;
+        line-height: 60px;
+        span {
+            position: absolute;
+            right: 20px;
+            font-size: 14px;
+        }
+        em {
+            font-style: normal;
+            color: #555;
+        }
+        strong {
+            padding-right: 10px;
+        }
+    }
+    .content {
+        border: 1px solid #ccc;
+        background: #fff;
+        padding: 30px;
+        font-size: 16px;
+    }
+}
+
+.login-box {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(82,168,236,.6);
+    margin: 0 auto;
+    background: #eee;
+    transition: .4s;
+    opacity: 0;
+    box-sizing: border-box;
+    padding: 10px 80px;
+}
+
+h1.title {
+    font: 24px/50px 'arial';
+    color: #2e6da4;
+    text-align: center;
+    height: 70px;
+    padding-top: 0 10px;
+}
+
+.w120 {
+    width: 120px;
+}

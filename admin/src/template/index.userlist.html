@@ -1,0 +1,32 @@
+<div class="container-fluid" style="margin-top:50px;">
+    <h3>
+        <i class="glyphicon glyphicon-user"></i> 用户列表</h3>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>用户名</th>
+            <th>昵称</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>邮箱地址</th>
+            <th>登录时间</th>
+            <th>项目组</th>
+            <th>操作</th>
+        </tr>
+        <tr ng-repeat="item in users">
+            <td>{{item.id}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.sex == 1 ? '男' : '女'}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.logindate | date:'yyyy-MM-dd'}}</td>
+            <td>{{item.class | getClass:allClass}}</td>
+            <td>
+                <a ui-sref="index.update({id: item.id})" class="btn btn-primary">修改</a>
+                <button type="button" class="btn btn-danger" ng-click="rmuser(item.id, $index)">删除</button>
+            </td>
+        </tr>
+    </table>
+    <user-page></user-page>
+</div>

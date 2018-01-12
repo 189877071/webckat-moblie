@@ -1,0 +1,20 @@
+<div class="login-box" auto-height>
+    <h1 class="title">WEBCHAT—后台管理</h1>
+    <form class="form-horizontal p20" ng-submit="submit()">
+        <div ng-class="class.username">
+            <div class="col-sm-12">
+                <input type="text" id="username" ng-model="username" autofocus class="form-control" ng-focus="userfocus()" placeholder="用户名">
+                <span class="form-control-feedback w120" aria-hidden="true">{{class.usernameerr}}</span>
+            </div>
+        </div>
+
+        <div ng-class="class.password">
+            <div class="col-sm-12">
+                <input type="password" class="form-control" ng-focus="passfocus()" ng-model="password" placeholder="密码">
+                <span class="form-control-feedback w120" aria-hidden="true">{{class.passworderr}}</span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-default btn-block">登 录</button>
+    </form>
+</div>

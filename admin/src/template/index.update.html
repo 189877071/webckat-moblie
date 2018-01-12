@@ -1,0 +1,77 @@
+<div class="home-box">
+    <h3>
+        <i class="glyphicon glyphicon-wrench"></i> 修改用户信息</h3>
+    <form ng-submit="submit()">
+        <div class="form-group" ng-class="{'has-error': err.username, 'has-feedback': err.username, 'feedback-default': !err.username}">
+            <label>用户名：</label>
+            <input type="text" class="form-control" placeholder="用户名" ng-model="data.username" ng-change="changefn('username')">
+            <span class="form-control-feedback wauto" aria-hidden="true">用户名不能为空</span>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': err.name, 'has-feedback': err.name, 'feedback-default': !err.name}">
+            <label>昵称：</label>
+            <input type="text" class="form-control" placeholder="昵称" ng-model="data.name" ng-change="changefn('name')">
+            <span class="form-control-feedback wauto" aria-hidden="true">昵称不能为空</span>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': err.email, 'has-feedback': err.email, 'feedback-default': !err.email}">
+            <label>邮箱地址：</label>
+            <input type="email" class="form-control" placeholder="邮箱地址" ng-model="data.email" ng-change="changefn('email')">
+            <span class="form-control-feedback wauto" aria-hidden="true">邮箱地址不正确</span>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': err.password, 'has-feedback': err.password, 'feedback-default': !err.password}">
+            <label>密码：</label>
+            <input type="text" class="form-control" placeholder="密码" ng-model="data.password" ng-change="changefn('password')">
+            <span class="form-control-feedback wauto" aria-hidden="true">密码不能为空</span>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': err.age, 'has-feedback': err.age, 'feedback-default': !err.age}">
+            <label>年龄：</label>
+            <input type="number" min="0" max="120" class="form-control" placeholder="年龄" ng-model="data.age" ng-change="changefn('age')">
+            <span class="form-control-feedback wauto" aria-hidden="true">年龄大小因为0-120岁</span>
+        </div>
+
+        <div class="form-group">
+            <label>分类：</label>
+            <select class="form-control" ng-model="data.class">
+                <option ng-repeat="item in allClass" value="{{item.id}}">{{item.name}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>性别：</label>
+            <select class="form-control" ng-model="data.sex">
+                <option value="1">男</option>
+                <option value="2">女</option>
+            </select>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>上传头像：</label>
+                    <input type="file" accept="image/*" head-photo-file>
+                    <p class="help-block">如果不上传则使用系统默认头像.</p>
+                </div>
+                <div class="col-md-4">
+                    <img ng-src="{{data.headphoto}}" alt="..." width="100" height="100" class="img-thumbnail">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>简介：</label>
+            <textarea class="form-control" rows="3" style="resize: none;" ng-model="data.synopsis"></textarea>
+        </div>
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" ng-model="data.issystem"> 是否为测试用户
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">修改</button>
+    </form>
+    <div class="mask" ng-show="isload">正在加载……</div>
+</div>

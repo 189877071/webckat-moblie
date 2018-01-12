@@ -1,0 +1,13 @@
+<div class="home-box clearfix">
+    <h3 style="height: 40px; line-height: 40px;">一共有 <strong class="text-danger">{{img.length}}</strong> 张头像</h3>
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 set-img-box" ng-repeat="item in img">
+            <img ng-src="{{imgMainUrl + '/' + item.url}}" style="width: 100%;" alt=" " class="img-thumbnail">
+            <div class="rm-mask">
+                <div class="btn-box"  ng-hide="isUpload">
+                    <button type="button" class="btn btn-danger" ng-click="rmImg($index, item.id)">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

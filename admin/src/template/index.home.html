@@ -1,0 +1,114 @@
+<!-- <div class="home-box">
+    <h3><i class="glyphicon glyphicon-signal"></i> 系统状态</h3>
+
+    <dl class="sestem-box">
+        <dt>socket进程：</dt>
+        <dd class="container-fluid">
+            <div class="col-sm-4"><em>ip： </em> <span>127.0.0.1</span></div>
+            <div class="col-sm-4"><em>端口：</em> <span>6000</span></div>
+            <div class="col-sm-4"><em>状态：</em> <span class="text-success"><i class="glyphicon glyphicon-ok"></i> 正常</span></div>
+        </dd>
+        <dd class="container-fluid">
+            <div class="col-sm-4"><em>ip： </em> <span>127.0.0.1</span></div>
+            <div class="col-sm-4"><em>端口：</em> <span>6001</span></div>
+            <div class="col-sm-4"><em>状态：</em> <span class="text-success"><i class="glyphicon glyphicon-ok"></i> 正常</span></div>
+        </dd>
+    </dl>
+
+    <dl class="sestem-box">
+        <dt>api进程：</dt>
+        <dd class="container-fluid">
+            <div class="col-sm-4"><em>ip： </em> <span>127.0.0.1</span></div>
+            <div class="col-sm-4"><em>端口：</em> <span>5000</span></div>
+            <div class="col-sm-4"><em>状态：</em> <span class="text-success"><i class="glyphicon glyphicon-ok"></i> 正常</span></div>
+        </dd>
+        <dd class="container-fluid">
+            <div class="col-sm-4"><em>ip： </em> <span>127.0.0.1</span></div>
+            <div class="col-sm-4"><em>端口：</em> <span>5001</span></div>
+            <div class="col-sm-4"><em>状态：</em> <span class="text-success"><i class="glyphicon glyphicon-ok"></i> 正常</span></div>
+        </dd>
+    </dl>
+    <div class="clearfix">
+        <h4 class="pull-left">
+            今天一个有 <strong class="text-info">10</strong> 人登录过。
+        </h4>
+        <div class="pull-right">
+            <button type="button" class="btn btn-danger">
+                <i class="glyphicon glyphicon-warning-sign"></i> 重启系统
+            </button>
+        </div>
+    </div>
+</div> -->
+
+<div class="home-box">
+    <h3>
+        <i class="glyphicon glyphicon-book"></i> 数据库信息设置</h3>
+    <form style="padding-top: 20px;" ng-submit="dbSubmit()">
+        <div class="form-group">
+            <label for="dbHost">主机名：</label>
+            <input type="text" class="form-control" id="dbHost" ng-model="db.host" placeholder="数据库主机名">
+        </div>
+        <div class="form-group">
+            <label for="dbUser">用户名：</label>
+            <input type="text" class="form-control" id="dbUser" ng-model="db.user" placeholder="数据库用户名">
+        </div>
+        <div class="form-group">
+            <label for="dbPass  ">密码：</label>
+            <input type="text" class="form-control" id="dbPass" ng-model="db.password" placeholder="数据库密码">
+        </div>
+        <div class="form-group">
+            <label for="dbName">数据库名称：</label>
+            <input type="text" class="form-control" id="dbName" ng-model="db.database" placeholder="数据库名称">
+        </div>
+        <div class="form-group">
+            <label for="dbNum">默认连接数量：</label>
+            <input type="number" class="form-control" id="dbNum" ng-model="db.connectionLimit" placeholder="数据库连接池数量">
+        </div>
+        <button type="submit" class="btn btn-default">
+            <i class="glyphicon glyphicon-send"></i> 修改</button>
+    </form>
+</div>
+
+<div class="home-box">
+    <h3>
+        <i class="glyphicon glyphicon-envelope"></i> 邮箱信息设置</h3>
+    <form style="padding-top: 20px;" ng-submit="emailSubmit()">
+        <div class="form-group">
+            <label for="emailHost">主机名：</label>
+            <input type="text" class="form-control" id="emailHost" ng-model="email.host" placeholder="邮箱服务器主机名">
+        </div>
+        <div class="form-group">
+            <label for="emailPost">端口号：</label>
+            <input type="number" class="form-control" id="emailPost" ng-model="email.port" placeholder="邮箱服务器端口号">
+        </div>
+        <div class="form-group">
+            <label for="emailName">用户名：</label>
+            <input type="text" class="form-control" id="emailName" ng-model="email.user" placeholder="邮箱服务器登录用户名">
+        </div>
+        <div class="form-group">
+            <label for="emailPass">密码：</label>
+            <input type="text" class="form-control" id="emailPass" ng-model="email.pass" placeholder="邮箱服务器登录密码">
+        </div>
+        <button type="submit" class="btn btn-default">
+            <i class="glyphicon glyphicon-send"></i> 修改</button>
+    </form>
+</div>
+
+<div class="home-box">
+    <h3>
+        <i class="glyphicon glyphicon-user"></i> 修改登录信息</h3>
+    <form style="padding-top: 20px;" ng-submit="adminSubmit()">
+        <div class="form-group">
+            <label for="adminName">管理员用户名：</label>
+            <input type="text" class="form-control" id="adminName" ng-model="admin.username" placeholder="管理员用户名">
+        </div>
+
+        <div class="form-group">
+            <label for="adminPass">密码：</label>
+            <input type="password" class="form-control" id="adminPass" ng-model="admin.password" placeholder="数据库密码">
+        </div>
+
+        <button type="submit" class="btn btn-default">
+            <i class="glyphicon glyphicon-send"></i> 修改</button>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<div class="home-box">
+    <h3 style="height: 40px; line-height: 40px;">
+        <i class="glyphicon glyphicon-paste"></i> 公告列表</h3>
+    <div class="container-fluid" ng-if="all.data.length">
+        <table class="table table-bordered">
+            <tr>
+                <th>#</th>
+                <th>标题</th>
+                <th>发布时间</th>
+                <th style="width: 200px;">操作</th>
+            </tr>
+            <tr ng-repeat="item in all.data">
+                <td>{{$index+1}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.otime | date:'yyyy-MM-dd'}}</td>
+                <td>
+                    <a ui-sref="index.notice({id: item.id})" type="button" class="btn btn-primary">查看</a>
+                    <button type="button" class="btn btn-danger" ng-click="all.rm(item.id, $index)">删除</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

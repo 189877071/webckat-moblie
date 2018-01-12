@@ -1,0 +1,35 @@
+.bg-login {
+    background: url(../image/bg1.jpg) no-repeat;
+}
+
+.bg-index {
+    background: url(../image/bg2.jpg) no-repeat;
+}
+
+.bg-users {
+    background: url(../image/bg3.jpg) no-repeat;
+}
+
+.bg-notice {
+    background: url(../image/bg4.jpg) no-repeat;
+}
+
+.bg-set {
+    background: url(../image/bg5.jpg) no-repeat;
+}
+
+.bg-setchild {
+    background: url(../image/bg6.jpg) no-repeat;
+}
+
+.bg-chat {
+    background: url(../image/bg7.jpg) no-repeat;
+}
+
+.bg-infor {
+    background: url(../image/bg8.jpg) no-repeat;
+}
+
+.bg-login, .bg-index, .bg-users, .bg-notice, .bg-set, .bg-setchild, .bg-chat, .bg-infor {
+    background-size: 100% 100%;
+}

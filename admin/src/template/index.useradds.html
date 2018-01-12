@@ -1,0 +1,48 @@
+<div class="home-box">
+    <h3>
+        <i class="glyphicon glyphicon-road"></i> 批量添加用户</h3>
+    <div class="form-group">
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">选择所在组：</label>
+            <select class="form-control" ng-model="class">
+                <option ng-repeat="item in list" value="{{item.id}}">{{item.name}}</option>
+            </select>
+        </div>
+        <label>按照规则输入要添加用户的昵称：
+            <a href="http://www.qmsjmfb.com" target="_blank">昵称生成地址</a>
+        </label>
+        <textarea class="form-control" rows="5" style="resize: none;" ng-model="nameStr"></textarea>
+    </div>
+    <div class="clearfix">
+        <button type="button" class="btn btn-primary" ng-click="createData()">生成数据</button>
+        <button type="button" class="btn btn-warning" ng-if="users.length > 0" ng-click="upload()">上传数据</button>
+    </div>
+
+    <table class="table table-bordered  table-striped table-hover" style="margin-top:20px;" ng-if="users.length > 0">
+        <tr>
+            <th>#</th>
+            <th>昵称</th>
+            <th>用户名</th>
+            <th>邮箱</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>操作</th>
+        </tr>
+        <tr ng-repeat="item in users">
+            <td>{{$index+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.sex == 1 ? '男' : '女'}}</td>
+            <td>{{item.age}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" ng-click="rmUser($index)">删除</button>
+            </td>
+        </tr>
+    </table>
+
+    <div class="mask" ng-show="isLoad">正在上传……
+        <span class="text-danger">{{loadbfb}}%</span>
+    </div>
+</div>
